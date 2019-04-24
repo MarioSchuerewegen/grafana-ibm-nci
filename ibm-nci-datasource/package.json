@@ -1,0 +1,25 @@
+{
+  "name": "ibm-nci-datasource",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt": "^1.0.4",
+    "grunt-execute": "^0.2.2",
+    "grunt-typescript": "^0.8.0",
+    "load-grunt-tasks": "^4.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.4",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-execute": "^0.2.2",
+    "grunt-tsc": "^1.0.12",
+    "grunt-typescript": "^0.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
