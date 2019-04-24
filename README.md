@@ -20,7 +20,7 @@ Contents
 
 [**2  Example Impact Policy and output parameters**](#PolicyExample)
 
-[**3  How to create a new panel using the IBM NCI datasource **](#Panel)
+[**3  How to create a new panel using the IBM NCI datasource**](#Panel)
 
 [**4. Grafana installation**](#grafana-installation)
 
