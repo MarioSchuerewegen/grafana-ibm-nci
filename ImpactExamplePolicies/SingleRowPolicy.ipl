@@ -1,0 +1,8 @@
+MyOutput = newObject();
+MyOutput.STATUS=5;
+MyOutput.STATUS2=50;
+MyOutput.Severity  = 4 ;
+MyOutput.TS2  = LocalTime(getdate()) ;
+MyOutput.TS  = getdate() ;
+MyOutput.Name = "TEST";
+log(MyOutput);

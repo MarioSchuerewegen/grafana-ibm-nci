@@ -1,0 +1,13 @@
+#This file was written by Impact Server.
+#Tue Mar 19 07:24:25 PDT 2019
+impact.eicparam.enabled=false
+impact.dtparams.1.DTTYPE=Impact Object
+impact.params.numparams=0
+impact.dtparams.1.IMPACT_DATATYPE_NAME=
+impact.dtparams.1.DTNAME=SingleRow
+impact.dtparams.1.IMPACT_DATASOURCE_NAME=
+impact.dtparams.numparams=1
+impact.dtparams.1.POLICYVARIABLENAME=MyOutput
+impact.dtparams.1.value={STATUS\tStatus\tfalse}\t{STATUS2\tPercentage\tfalse}\t{Severity\tInteger\tfalse}\t{TS\tInteger\tfalse}\t{Name\tString\tfalse}\t{TS2\tTimestamp\tfalse}
+impact.uidataproviderparam.enabled=false
+impact.tasksparam.numparams=0

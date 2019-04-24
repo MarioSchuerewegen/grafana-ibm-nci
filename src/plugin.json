@@ -1,0 +1,33 @@
+{
+  "name": "IBM NCI",
+  "type": "datasource",
+  "id": "ibm-nci-datasource",
+
+  "metrics": true,
+  "annotations": false,
+
+  "info": {
+    "author": {
+      "name": "Mario Schuerewegen",
+      "url": "https://github.com/MarioSchuerewegen"
+    },
+    "logos": {
+      "small": "img/ibm-nci.png",
+      "large": "img/ibm-nci.png"
+    },
+	"links": [
+	      {"name": "GitHub", "url": "https://github.com/MarioSchuerewegen/grafana-ibm-nci"},
+	      {"name": "Docs", "url": "https://github.com/MarioSchuerewegen/grafana-ibm-nci/README.md"},
+	      {"name": "License", "url": "https://github.com/MarioSchuerewegen/grafana-ibm-nci/LICENSE.txt"}
+	    ],
+    "dependencies": {
+      "grafanaVersion": "^3.0.1",
+      "angular": "^1.5.6",
+      "lodash": "^4.13.1",
+      "moment": "^2.13.0",
+      "plugins": [ ]
+    },
+    "version": "0.1.0",
+    "updated": "2019-04-23"
+  }
+}

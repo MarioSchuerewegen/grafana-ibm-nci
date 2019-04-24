@@ -1,0 +1,23 @@
+#This file was written by Impact Server.
+#Wed Mar 20 01:54:54 PDT 2019
+impact.params.2.label=MONITOR
+impact.dtparams.1.DTTYPE=Array Of Impact Object
+impact.params.1.label=SITE
+impact.params.2.desc=
+impact.dtparams.1.POLICYVARIABLENAME=AllRows
+impact.params.1.name=SITE
+impact.eicparam.enabled=false
+impact.dtparams.numparams=1
+impact.params.1.format=String
+impact.params.2.name=MONITOR
+impact.params.2.value=
+impact.dtparams.1.value={SITE\tString\tfalse}\t{MONITOR\tString\tfalse}\t{TS\tTimestamp\tfalse}\t{TS2\tString\tfalse}\t{METRIC\tFloat\tfalse}
+impact.params.1.value=
+impact.tasksparam.numparams=0
+impact.dtparams.1.IMPACT_DATATYPE_NAME=
+impact.params.numparams=2
+impact.params.2.format=String
+impact.dtparams.1.IMPACT_DATASOURCE_NAME=
+impact.dtparams.1.DTNAME=MultiRow
+impact.uidataproviderparam.enabled=false
+impact.params.1.desc=

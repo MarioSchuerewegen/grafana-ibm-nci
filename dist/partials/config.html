@@ -1,0 +1,11 @@
+<datasource-http-settings current="ctrl.current"
+                          suggest-url="http://&lt;host&gt;:&lt;port&gt;/ibm/tivoli/rest/providers/Impact_NCICLUSTER"></datasource-http-settings>
+<div class="gf-form-group max-width-20">
+  <div class="gf-form-inline">
+    <gf-form-switch class="gf-form"
+                    ng-model="ctrl.current.jsonData.sendHttpDelete"
+                    label="Deallocate dataset after every metric query (recommended)" tooltip="Any CURI REST GET requests for metrics requires that the request issuer also send a DELETE request when the payload received from the previous GET request is no longer required by the client."
+                    checked="ctrl.current.jsonData.sendHttpDelete" switch-class="max-width-6">
+    </gf-form-switch>
+  </div>
+</div>
