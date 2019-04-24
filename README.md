@@ -1,3 +1,4 @@
+
 # IBM NCI plugin for Grafana
 
 Author: Mario Schuerewegen
@@ -17,7 +18,7 @@ Contents
 
 [**1. Introduction**](#introduction)
 
-[**2  example Impact Policy and output parameters**](#PolicyExample)
+[**2  Example Impact Policy and output parameters**](#PolicyExample)
 
 [**3  How to create a new panel using the IBM NCI datasource **](#Panel)
 
@@ -53,9 +54,8 @@ IBM NCI plugin adds Grafana support for:
 The plugin uses the Impact DataUI provider's REST API to collect data directly from Impact
 and show on the Grafana dashboard.
 
-![](./media/Sample_LinuxOS_dashboard_animated.gif)
 
-example Impact Policy and output parameters
+Example Impact Policy and output parameters
 ===============================
 Example Impact policies and param files is provided in the repository ../ImpactExamplePolicies/
 MultiRowPolicy.ipl and MultiRowPolicy.params
@@ -79,61 +79,66 @@ Follow these steps to create a sample chart the data from the MultiRowPolicy exa
 2.  Drag and drop the Graph icon to the Empty Space.
 3.  Now it should look like below.
 ![](./media/emptypanel.png)
+
+
 4.  Click on the **Panel Title** bar and select **Edit**.
 ![](./media/paneledit.png)
+
 5.  change the time selector to > 24 h.  e.g. This Week
 ![](./media/timeselect.png)
+
 6.  Click the **Data source** list and select the NCI data source. In this example it is named *IBM NCI*.
 ![](./media/emptyquery.png)
-7.  Select **DataSource** (you can type the policyname name to
-    search for impact policies with a dataUI output policy or scroll down a dropdown list).
-    The list is built dynamically through the REST API call. If the resulting list is empty, a possible cause might be a    connection problem with the NCI REST API. You can easily debug it with developer tools in Chrome or Firebug in Firefox (see the
-    Troubleshooting chapter at the end of this document).
+7.  Select **DataSource** 
+	(you can type the policyname name to search for impact policies with a dataUI output policy or scroll down a dropdown list).
+    The list is built dynamically through the REST API call.
+     If the resulting list is empty, a possible cause might be a connection problem with the NCI REST API.
+     You can easily debug it with developer tools in Chrome or Firebug in Firefox (see the Troubleshooting chapter at the end of this document).
 ![](./media/datasource.png)
 8.  Select DataSet.
 ![](./media/dataset.png)
     this will trigger a reload of the Time Attribute and Value Attribute Fields.
-    and the Policy Parameter will be completed with the input parametes of the policy, If any..
+    The Policy Parameter will be also be completed with the input parametes of the policy, If any have been defined.
 ![](./media/datasetselected.png)
 9.  Select Time Attribute and Value Attribute.
-    ( keep in mind that Impact DataTime field provides human readable time in displayvalue , and epoch time in value)
-     epoch value is required for grafana
-![](./media/timeattribute.png)
-![](./media/valueattribute.png)
+    ( keep in mind that an Impact _**DataTime**_ field provides **human readable time** in **displayvalue**.
+    and the **epoch time** in **value**)
+     **epoch/unix time** value is required for grafana metric series timestamps.
+     ![](./media/timeattribute.png) ![](./media/valueattribute.png)
 10.  Select Metric Field
     choose the field that provides the number ( metric ) that is going to in your graph.
     this can take a few seconds to populate from the REST information
 ![](./media/metric.png)
-11. Group by  ( optional field..for data grouping in the graph)
-12. if any Policy Input Parameters exist in the policy, they will be visible in the Policy Parameter as input field.
-    they are pre-populated with the name of the variable in white.
+11. Group by  Field
+	( optional field..for data grouping in the graph)
+	see graphs below.
+12. Policy Parameters
+	if any Policy Input Parameters exist in the policy, they will be visible in the Policy Parameter as input field.
+    they are automatically populated with the name of the variable itselve in white.
     click the input field with the white text.
 ![](./media/policyparameter.png)
-13.  Condition (for filtering results) and Alias (for parameter name
-    customization) are optional. Alias, if defined will replace the default
-    parameter name in the legend. The default is *MetricFieldName:GroupBy*.
-    The alias replaces *Metric Field Fieldname*.
-14.  The result should be similar to the one below.
+13.  Condition
+	(for filtering results) and Alias (for parameter name customization) are optional.
+	Alias, if defined will replace the default parameter name in the legend.
+	The default is *MetricFieldName:GroupBy*.
+    The alias replaces the *Metric Field Fieldname* in the graph legend.
+   ![](./media/condition.png)
+15.  The result should be similar to the one below.
 ![](./media/result.png)
-10.  In this example we want to draw data from two parameter on the
+16.  In this example we want to draw data from two parameter on the
     same line chart. Click **+Add query**, to add a query from another params
     and select the Field the same way as above. The result should be similar
     to the one below.
 ![](./media/result2.png)
-11.  Now let’s add the example filtering statement, and add agent name to the
-    legend in the **Alias field**, so we can easily distinguish which line
-    belongs to a particular agent. Add the **Condition** and **Alias** as shown in the example below.
-![](./media/condition.png)
 
-12.  We are almost done! Add a proper chart title in General tab.
-![](./media/image13.png)
-13.  Customize the legend in the Legend tab to make it look better and
+17.  We are almost done! Add a proper chart title in General tab.
+![](./media/paneltitle.png)
+19.  Customize the legend in the Visualisation -> Legend tab to make it look better and
     provide more useful information. Much more can be customized in the
     Display tab.
-If you want to customize each data series separately, use the Display tab
-and Series overrides section.
+If you want to customize each data series separately, use the Visualisation -> Series overrides section.
 ![](./media/image14.png)
-14.  The chart is completed. You can resize it if you want to include more
+20.  The chart is completed. You can resize it if you want to include more
     panels in the row, add new rows with the new panels and so on.
 ![](./media/image15.png)
 
@@ -175,11 +180,11 @@ IBM NCI data source configuration
 
 Click the Grafana Logo -&gt; Data Sources and click **+Add data source**.
 
-![g1.png](./media/ds.png)
+![](./media/ds.png)
 
-Specify the data source name and select “IBM NCI” from the list.
+Specify the data source name and select â€œIBM NCIâ€� from the list.
 
-![g2.png](./media/dsconfig.png)
+![](./media/dsconfig.png)
 
 Specify the REST API URL:
 
@@ -189,7 +194,7 @@ Specify the REST API URL:
 
  
 
-![domain_override.png](./media/domain_override.png)
+![](./media/domain_override.png)
 
 Select **Basic Auth** and **With credentials** and specify the user name
 
@@ -201,16 +206,16 @@ Disable this option only for testing a new panel query, if you want to use Grafa
 
 The Screen below illustrates the completed configuration for the NCI data source:
 
-![g3.png](./media/ds2.png){
+![](./media/ds2.png){
 
 Click **Save & Test**. If the connection is successful, you should see the following
 message:
 
-![g4.png](./media/ds3.png)
+![](./media/ds3.png)
 
 Click Cancel to exit. Now the data source is configured.
 
-![g7.png](./media/ds5.png)
+![](./media/ds5.png)
 
 Troubleshooting
 ===============
